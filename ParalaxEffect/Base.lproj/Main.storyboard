@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParalaxEffect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gph-Q9-f2g">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topimage" translatesAutoresizingMaskIntoConstraints="NO" id="yw1-6W-PCQ">
+                                        <rect key="frame" x="0.0" y="-64" width="600" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="217" id="ScV-l8-3Yk"/>
+                                            <constraint firstAttribute="height" constant="217" id="gH1-3y-e8D"/>
+                                            <constraint firstAttribute="height" constant="217" id="rV7-GZ-lgd"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ScV-l8-3Yk"/>
+                                                <exclude reference="gH1-3y-e8D"/>
+                                                <exclude reference="rV7-GZ-lgd"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyo-PP-b0e">
+                                        <rect key="frame" x="0.0" y="217" width="600" height="320"/>
+                                        <color key="backgroundColor" red="1" green="0.60298071460000002" blue="0.093815704139999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="320" id="2dI-V2-iP1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="leading" secondItem="gph-Q9-f2g" secondAttribute="leading" id="7Bz-13-dR1"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="trailing" secondItem="Uyo-PP-b0e" secondAttribute="trailing" id="9Ba-jG-Z7W"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uyo-PP-b0e" secondAttribute="trailing" id="KDC-mz-xh9"/>
+                                    <constraint firstAttribute="bottom" secondItem="yw1-6W-PCQ" secondAttribute="bottom" constant="319" id="Nlh-k2-H9x"/>
+                                    <constraint firstItem="Uyo-PP-b0e" firstAttribute="top" secondItem="gph-Q9-f2g" secondAttribute="top" constant="217" id="QVq-B1-pw0"/>
+                                    <constraint firstItem="Uyo-PP-b0e" firstAttribute="top" secondItem="yw1-6W-PCQ" secondAttribute="bottom" id="Tp4-DW-b8Y"/>
+                                    <constraint firstItem="Uyo-PP-b0e" firstAttribute="top" secondItem="yw1-6W-PCQ" secondAttribute="bottom" id="UR8-Um-6mB"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="leading" secondItem="Uyo-PP-b0e" secondAttribute="leading" id="Uwk-9m-aFG"/>
+                                    <constraint firstAttribute="trailing" secondItem="yw1-6W-PCQ" secondAttribute="trailing" id="VX4-uq-P6g"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="centerX" secondItem="gph-Q9-f2g" secondAttribute="centerX" id="hnu-fW-IRP"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="centerX" secondItem="gph-Q9-f2g" secondAttribute="centerX" id="nF8-1K-cx9"/>
+                                    <constraint firstAttribute="bottom" secondItem="yw1-6W-PCQ" secondAttribute="bottom" constant="255" id="pYs-mo-bmm"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="top" relation="lessThanOrEqual" secondItem="gph-Q9-f2g" secondAttribute="top" priority="750" constant="20" symbolic="YES" id="qBz-8U-k9T"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uyo-PP-b0e" secondAttribute="bottom" constant="66" id="rG1-ev-YUs"/>
+                                    <constraint firstItem="Uyo-PP-b0e" firstAttribute="leading" secondItem="gph-Q9-f2g" secondAttribute="leading" id="tFh-rQ-0VW"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="top" secondItem="gph-Q9-f2g" secondAttribute="top" id="yF4-l9-E4s"/>
+                                    <constraint firstItem="yw1-6W-PCQ" firstAttribute="top" secondItem="gph-Q9-f2g" secondAttribute="top" id="zPt-ac-FVT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Ba-jG-Z7W"/>
+                                        <exclude reference="Nlh-k2-H9x"/>
+                                        <exclude reference="Uwk-9m-aFG"/>
+                                        <exclude reference="nF8-1K-cx9"/>
+                                        <exclude reference="pYs-mo-bmm"/>
+                                        <exclude reference="yF4-l9-E4s"/>
+                                        <exclude reference="zPt-ac-FVT"/>
+                                        <exclude reference="Tp4-DW-b8Y"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yw1-6W-PCQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="248-Ch-9tz"/>
+                            <constraint firstItem="gph-Q9-f2g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AB4-rk-jZb"/>
+                            <constraint firstItem="gph-Q9-f2g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="byv-HE-RAn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gph-Q9-f2g" secondAttribute="bottom" id="jOh-nv-f0D"/>
+                            <constraint firstAttribute="trailing" secondItem="gph-Q9-f2g" secondAttribute="trailing" id="zKe-dI-AZA"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="topimage" width="1632" height="1224"/>
+    </resources>
 </document>
